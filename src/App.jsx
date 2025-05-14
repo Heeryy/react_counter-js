@@ -4,16 +4,12 @@ import './App.scss';
 export const App = () => {
   const [count, setCount] = useState(0);
 
-  const addCombined = delta => {
-    setCount(prev => prev + delta);
-  };
-
   const addOne = () => {
-    addCombined(1);
+    setCount(count + 1);
   };
 
   const add100 = () => {
-    addCombined(100);
+    setCount(a => a + 100);
   };
 
   // DON'T change the code below
